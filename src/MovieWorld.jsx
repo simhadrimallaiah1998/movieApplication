@@ -28,7 +28,7 @@ const MovieWorld = () => {
 
   useEffect(() => {
     MovieApiCall();
-  }, []);
+  });
 
   const showDetailsOfThisFilm = (event) => {
     setDialog(!dialog);
