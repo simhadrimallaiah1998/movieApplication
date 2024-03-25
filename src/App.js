@@ -5,7 +5,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/moviecd" element={<MovieWorld />}></Route>
+        <Route path="/movie" element={<MovieWorld />}></Route>
         <Route path="/" element={<Login />}></Route>
       </Routes>
     </BrowserRouter>
