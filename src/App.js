@@ -1,23 +1,13 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MovieWorld from "./MovieWorld";
+import Login from "./Login";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          This is Movie Application developing by Gandra Simhadri
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/movie" element={<MovieWorld />}></Route>
+        <Route path="/" element={<Login />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
