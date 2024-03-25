@@ -29,7 +29,7 @@ const DIalogBox = ({ data, handleClose }) => {
 
   useEffect(() => {
     MovieApiCall();
-  }, []);
+  });
 
   return (
     <div className="px-10 py-10 absolute top-0 bottom-0 right-0 left-0 w-full grid grid-cols-5 justify-center items-center">
