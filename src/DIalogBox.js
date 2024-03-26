@@ -32,20 +32,20 @@ const DIalogBox = ({ data, handleClose }) => {
   });
 
   return (
-    <div className="px-10 py-10 absolute top-0 bottom-0 right-0 left-0 w-full grid grid-cols-5 justify-center items-center">
-      <div className="px-8 py-8  col-start-2  bg-opacity-50 text-center col-end-5 bg-white text-black font-semibold rounded-md">
-        <h1 className="text-lg font-bold ">{data.title}</h1>
-        <p className="text-md font-semibold ">{data.overview}</p>
+    <div className="px-10 py-10  w-full grid grid-cols-5 justify-center items-center">
+      <div className="px-8 py-8 col-span-3 bg-white bg-opacity-10 text-center   text-black font-bold rounded-md">
+        <h1 className=" text-3xl font-extrabold ">{data.title}</h1>
+        <p className="text-1xl font-extrabold ">{data.overview}</p>
 
         <button
-          className="text-black font-bold m-4 bg-blue-500 px-4 py-1"
+          className="text-black font-extrabold m-4 bg-transparent border-4 border-black rounded-md px-4 py-1"
           onClick={handleClose}
         >
           Close
         </button>
 
         <button
-          className="text-black font-bold m-4 bg-blue-500 px-4 py-1"
+          className="text-black font-extrabold m-4 bg-transparent border-4 border-black rounded-md px-4 py-1"
           onClick={() => setPlay(true)}
         >
           Play Video
