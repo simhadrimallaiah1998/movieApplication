@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply the animation to the marquee element */
+.marquee {
+  animation: marquee 25s linear infinite;
+  color: black;
+  font-weight: bold;
+}
