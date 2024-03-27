@@ -33,7 +33,7 @@ const DIalogBox = ({ data, handleClose }) => {
 
   return (
     <div className="px-10 py-10  w-full grid grid-cols-5 justify-center items-center">
-      <div className="px-8 py-8 col-span-3 bg-white bg-opacity-10 text-center   text-black font-bold rounded-md">
+      <div className="px-8 py-8 col-span-5  lg:col-span-3 bg-white bg-opacity-10 text-center   text-black font-bold rounded-md">
         <h1 className=" text-3xl font-extrabold ">{data.title}</h1>
         <p className="text-1xl font-extrabold ">{data.overview}</p>
 
