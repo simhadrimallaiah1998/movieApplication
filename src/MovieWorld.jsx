@@ -13,7 +13,7 @@ const MovieWorld = () => {
   const [propData, setPropData] = useState({});
   const [pagination, setPagination] = useState(1);
   const [bannerPoster, serBannerPoster] = useState(
-    "https://image.tmdb.org/t/p/w500/feSiISwgEpVzR1v3zv2n2AU4ANJ.jpg"
+    "https://e1.pxfuel.com/desktop-wallpaper/72/1010/desktop-wallpaper-avatar-movie-for-laptop-avatar-movie-computer.jpg"
   );
 
   const APIUrl = imageUrl(pagination);
