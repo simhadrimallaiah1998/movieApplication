@@ -9,7 +9,6 @@ const MovieWorld = () => {
   const { name } = useParams();
   console.log("The Name of the User is", name);
   const [movieList, setmovieList] = useState([]);
-
   const [dialog, setDialog] = useState(false);
   const [propData, setPropData] = useState({});
   const [pagination, setPagination] = useState(1);
@@ -63,7 +62,7 @@ const MovieWorld = () => {
 
   return (
     <div className="h-screen  flex flex-col">
-      <div className=" bg-gradient-to-r from-purple-500 to-pink-500 flex-grow">
+      <div className=" bg-green-950 flex-grow">
         <div className="relative bg-white h-1/4">
           <img
             className="w-full h-[100%]  object-fill"
@@ -71,44 +70,32 @@ const MovieWorld = () => {
             alt="Movie Poster"
           />
         </div>
-        <div className="h-14 w-full bg-gradient-to-r py-4 from-purple-500 to-pink-500 absolute top-0 px-4 flex justify-between items-center">
-          <div className="flex justify-center items-center">
-            <img
-              src="https://api.logoisus.com/wm/647c742ff462f68a4c8ba24f"
-              className="w-10 h-10 m-1 rounded-full"
-              alt="movieWorld"
-            />
-            <h1 className="text-green-950 font-serif text-lg font-extrabold">
-              MOVIE WORLD
-            </h1>
-          </div>
-
+        <div className="h-10 w-full bg-green-950 absolute top-0 px-4 flex justify-between items-center">
+          <h1 className="text-white font-lg font-extrabold">MOVIE WORLD</h1>
           <input
             type="search"
             placeholder="Please search for the movie"
             className="w-3/4 py-2 rounded-lg border-2  font-extrabold p-2 border-black"
           />
-          <h1 className="text-green-950 font-serif text-lg font-extrabold">
-            {name}
-          </h1>
+          <h1 className="text-white font-lg font-extrabold">{name}</h1>
         </div>
         <div className=" h-3/4 flex flex-row items-center flex-wrap">
           {movieList.map((E) => (
             <div
               onClick={() => showDetailsOfThisFilm(E)}
               key={E.id}
-              className="mx-2 h-64 flex-grow w-1/3 lg:w-1/6 mt-1 font-serif   scroll justify-center flex flex-col bg-gradient-to-r from-sky-500 to-indigo-500 hover:border-4 hover:p-4 hover:border-green-950 px-3 py-2  rounded-2xl"
+              className="mx-2 h-64 flex-grow w-1/3 lg:w-1/6 mt-1   scroll justify-center flex flex-col bg-black hover:bg-green-950 hover:border-4 hover:border-black px-3 py-2  rounded-2xl"
             >
               <img
                 className="h-2/3  object-cover rounded-xl"
                 src={`https://image.tmdb.org/t/p/w500${E.poster_path}`}
                 alt="Movie Poster"
               />
-              <h1 className="text-green-950 text-center text-md font-bold ">
+              <h1 className="text-white text-center text-md font-bold ">
                 {E.title}
               </h1>
 
-              <h1 className="text-green-950 text-center text-md font-bold ">
+              <h1 className="text-white text-center text-md font-bold ">
                 Released Date : {E.release_date}
               </h1>
             </div>
@@ -118,24 +105,24 @@ const MovieWorld = () => {
               <DIalogBox data={propData} handleClose={() => setDialog(false)} />
             )}
           </div>
-          <div className="text-center w-full font-serif text-green-950 flex justify-around items-center font-3xl font-bold">
+          <div className="text-center w-full text-white flex justify-around items-center font-3xl font-bold">
             <button
               onClick={handlePrevious}
-              className=" font-bold m-2 border-r-black border-8 bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2 rounded-l-full"
+              className=" font-bold m-2 border-r-black border-8 bg-green-950 px-6 py-2 rounded-l-full"
             >
               Previous
             </button>
             <button
               onClick={() => setPagination(pagination + 1)}
-              className=" font-bold m-2 border-l-black border-8 bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2 rounded-r-full"
+              className=" font-bold m-2 border-l-black border-8 bg-green-950 px-6 py-2 rounded-r-full"
             >
               Next
             </button>
           </div>
         </div>
         <div>
-          <hr className="text-green-950 bg-white border-2  border-black w-full" />
-          <div className="font-serif bg-gradient-to-r from-purple-500 to-pink-500 py-2 grid grid-flow-col h-40 justify-around ">
+          <hr className="text-black bg-white border-2  border-black w-full" />
+          <div className="bg-green-950 py-2 grid grid-flow-col h-40 justify-around ">
             <div>
               <img
                 src="https://api.logoisus.com/wm/647c742ff462f68a4c8ba24f"
@@ -144,7 +131,7 @@ const MovieWorld = () => {
               />
             </div>
             <div className=" text-center ">
-              <h1 className="text-green-950 font-extrabold">
+              <h1 className="text-white font-extrabold">
                 You can me latest Updates through Email
               </h1>
               <input
@@ -152,11 +139,11 @@ const MovieWorld = () => {
                 className="w-full py-2 rounded-lg border-2 border-black"
                 placeholder="Enter You Email"
               />
-              <button className="bg-green-950 rounded-xl text-white py-2 px-4 font-extrabold  m-2">
+              <button className="bg-black rounded-xl text-white py-2 px-4 font-extrabold  m-2">
                 Send Updates
               </button>
             </div>
-            <div className="text-green-950 font-extrabold ">
+            <div className="text-white font-extrabold ">
               <h1>You Can Contact me from</h1>
               <ul className="list-disc pl-6">
                 <li>
